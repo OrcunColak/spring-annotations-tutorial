@@ -1,5 +1,6 @@
 package com.colak.springannotationstutorial.aop.forannoation.controller;
 
+import com.colak.springannotationstutorial.aop.forannoation.annotation.RedisLock;
 import com.colak.springannotationstutorial.aop.forannoation.annotation.SpecificParameter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,8 @@ public class ExampleController {
     // The parameter 'card' was detected in the request with the value: yourCardValue
     @GetMapping(path = "status")
     @SpecificParameter("card")
+    @RedisLock(key = "myLockKey", timeout = 10)
     public String checkStatusCard(@RequestParam(name = "card") String card, @RequestParam String id) {
-        return "status account for client id, " + id + "!";
+        return "status account for client id: " + id + "!";
     }
 }

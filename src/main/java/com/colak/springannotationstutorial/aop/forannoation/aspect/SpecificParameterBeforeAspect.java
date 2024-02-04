@@ -13,11 +13,14 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 @Aspect
 @Component
 @Slf4j
-public class SpecificParameterAspect {
+public class SpecificParameterBeforeAspect {
 
-
+    /**
+     * The @Before aspect for @SpecificParameter
+     */
     @Before("@annotation(specificParameter)")
     public void beforeAnnotatedMethod(JoinPoint joinPoint, SpecificParameter specificParameter) {
+        // Get the value from annotation example
         String methodParameterName = specificParameter.value();
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
         String parameterValue = request.getParameter(methodParameterName);
