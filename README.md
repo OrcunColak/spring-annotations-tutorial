@@ -20,9 +20,3 @@ https://medium.com/javarevisited/spring-boot-annotations-controller-restcontroll
 When using @Controller annotation we have to use @ResponseBody annotation on every handler method if we need to return
 XML or JSON data.
 
-# AOP for Annotation
-
-Original code is from
-https://danielangel22.medium.com/how-to-create-custom-annotations-in-java-and-spring-boot-a0e37c4a4550
-
-Create AOP for annotation on method
