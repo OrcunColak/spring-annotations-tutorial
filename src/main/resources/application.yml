@@ -1,0 +1,5 @@
+external:
+  api:
+    countriesApiUrl: 'https://restcountries.com/v3.1/all'
+    countriesByRegionApiUrl: 'https://restcountries.com/v3.1/region/{region}'
+    countriesByCodeApiUrl: 'https://restcountries.com/v3.1/alpha/{code}'

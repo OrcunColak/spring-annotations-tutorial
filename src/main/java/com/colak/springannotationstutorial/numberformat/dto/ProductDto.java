@@ -1,4 +1,4 @@
-package com.colak.springannotationstutorial.format.dto;
+package com.colak.springannotationstutorial.numberformat.dto;
 
 import org.springframework.format.annotation.NumberFormat;
 

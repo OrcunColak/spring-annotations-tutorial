@@ -1,4 +1,4 @@
-package com.colak.springannotationstutorial.format.controller;
+package com.colak.springannotationstutorial.numberformat.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
